@@ -28,7 +28,7 @@ and their development status :
     **Status :** to do
 
     - [tree-root](src/tree-handling/tree-root.ts)  
-    Get root node.
+    Get root node.  
     **Status :** to do
 
     - [tree-select](src/tree-handling/tree-select.ts)  
