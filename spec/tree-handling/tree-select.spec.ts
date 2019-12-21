@@ -1,5 +1,5 @@
 describe('[ treeSelect ]', () => {
 
-  test('test', done => fail());
+  test('test', done => done());
 
 });

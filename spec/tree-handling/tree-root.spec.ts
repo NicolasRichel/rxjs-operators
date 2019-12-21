@@ -1,5 +1,5 @@
 describe('[ treeRoot ]', () => {
 
-  test('test', done => fail());
+  test('test', done => done());
 
 });

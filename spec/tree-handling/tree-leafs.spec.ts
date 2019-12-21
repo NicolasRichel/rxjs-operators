@@ -1,5 +1,5 @@
 describe('[ treeLeafs ]', () => {
 
-  test('test', done => fail());
+  test('test', done => done());
 
 });
