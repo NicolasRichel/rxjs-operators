@@ -1,0 +1,29 @@
+{
+  "name": "@nrl/rxjs-operators",
+  "version": "0.1.0",
+  "description": "A set of useful rxjs operators",
+  "main": "./dist/index.js",
+  "repository": "https://github.com/NicolasRichel/rxjs-operators",
+  "author": "NicolasRichel <nicolasrichel.github@gmail.com>",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "compile": "rm -r ./dist/* && tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-typescript": "^7.7.4",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.17",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "typescript": "^3.7.3"
+  }
+}
