@@ -10,7 +10,7 @@
     "access": "public"
   },
   "scripts": {
-    "compile": "rm -r ./dist/* && tsc",
+    "build": "rm -r ./dist/* && tsc",
     "test": "jest"
   },
   "dependencies": {
