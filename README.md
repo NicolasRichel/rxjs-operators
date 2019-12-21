@@ -7,30 +7,30 @@ and their development status :
 
  - **Tree Handling Operators**
 
-    - [sub-tree]()  
+    - [sub-tree](src/tree-handling/sub-tree.ts)  
     Get the sub tree at the given position.  
     **Status :** to do
 
-    - [tree-find]()  
+    - [tree-find](src/tree-handling/tree-find.ts)  
     Get a table contaning nodes that satisfy a given condition.  
     **Status :** to do
 
-    - [tree-leafs]()  
+    - [tree-leafs](src/tree-handling/tree-leafs.ts)  
     Get a table containing tree leafs.  
     **Status :** to do
 
-    - [tree-map]()  
+    - [tree-map](src/tree-handling/tree-map.ts)  
     Transform a tree into another tree with mapped nodes.  
     **Status :** done
 
-    - [tree-path]()  
+    - [tree-path](src/tree-handling/tree-path.ts)  
     Get a table contaning nodes on the given path.  
     **Status :** to do
 
-    - [tree-root]()  
+    - [tree-root](src/tree-handling/tree-root.ts)  
     Get root node.
     **Status :** to do
 
-    - [tree-select]()  
+    - [tree-select](src/tree-handling/tree-select.ts)  
     Get the node at a given position.  
     **Status :** to do
