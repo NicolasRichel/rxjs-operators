@@ -11,6 +11,7 @@ function dashToCamel {
 }
 
 function createSrcFileTemplate {
+  echo "Creating source file..."
   local srcFile=src/$1/$2.ts
   local opFnName=`dashToCamel $2`
   touch $srcFile
@@ -23,6 +24,7 @@ export function $opFnName(): (source: Observable<any>) => Observable<any> {\n\
 }
 
 function createSpecFileTemplate {
+  echo "Creating test file..."
   local specFile=spec/$1/$2.spec.ts
   local opFnName=`dashToCamel $2`
   touch $specFile
@@ -54,6 +56,7 @@ do
 
     createSrcFileTemplate $group $name
     createSpecFileTemplate $group $name
+    echo "Done."
     break
 
   fi
