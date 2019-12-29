@@ -9,28 +9,28 @@ and their development status :
 
     - [sub-tree](src/tree-handling/sub-tree.ts)  
     Get the sub tree at the given position.  
-    **Status :** to do
+    **Status :** done
 
     - [tree-find](src/tree-handling/tree-find.ts)  
-    Get a table contaning nodes that satisfy a given condition.  
-    **Status :** to do
+    Get an array contaning nodes that satisfy a given condition.  
+    **Status :** done
 
     - [tree-leafs](src/tree-handling/tree-leafs.ts)  
-    Get a table containing tree leafs.  
-    **Status :** to do
+    Get an array containing tree leafs.  
+    **Status :** done
 
     - [tree-map](src/tree-handling/tree-map.ts)  
     Transform a tree into another tree with mapped nodes.  
     **Status :** done
 
     - [tree-path](src/tree-handling/tree-path.ts)  
-    Get a table contaning nodes on the given path.  
-    **Status :** to do
+    Get an array contaning nodes on the given path.  
+    **Status :** done
 
     - [tree-root](src/tree-handling/tree-root.ts)  
     Get root node.  
-    **Status :** to do
+    **Status :** done
 
-    - [tree-select](src/tree-handling/tree-select.ts)  
+    - [tree-get](src/tree-handling/tree-get.ts)  
     Get the node at a given position.  
-    **Status :** to do
+    **Status :** done
