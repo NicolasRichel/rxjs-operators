@@ -1,88 +1,65 @@
-import { of } from "rxjs";
-import { Tree } from "../../src/types";
+import { of } from 'rxjs';
 
 
-export const NULL_TREE: Tree<{ id: number }> = null;
+export const mapFn = (node: { id: string }) => of({
+  name: node.id ? 'N'+node.id : ''
+});
 
-export const EMPTY_TREE: Tree<{ id: number }> = {};
+export const findFn = (node: { id: string }) => node.id === '01' || node.id === '0120';
 
-export const SINGLETON_TREE: Tree<{ id: number }> = {
-  id: 0
-};
 
-export const TREE_A: Tree<{ id: number }> = {
-  id: 0,
-  children: [
-    {
-      id: 1
-    },
-    {
-      id: 2,
+
+/**
+ * Setup and Teardown functions.
+ */
+
+export function initData(): any {
+  return {
+    TREE_NULL: null,
+    TREE_EMPTY: {},
+    TREE_SINGLETON: { id: '0' },
+    TREE_A: {
+      id: '0',
       children: [
         {
-          id: 3
-        }
-      ]
-    }
-  ]
-};
-
-export const TREE_B: Tree<{ id: number }> = {
-  id: 0,
-  children: [
-    {
-      id: 1,
-      children: [
-        {
-          id: 4,
+          id: '00',
           children: [
-            {
-              id: 7,
-              children: []
-            },
-            {
-              id: 8,
-              children: []
-            }
+            { id: '000' },
+            { id: '001', children: [] }
           ]
         },
         {
-          id: 5,
-          children: []
-        }
-      ]
-    },
-    {
-      id: 2,
-      children: [
-        {
-          id: 6,
+          id: '01',
           children: [
+            { id: '010' },
             {
-              id: 9,
-              children: []
+              id: '011',
+              children: [
+                { id: '0110' },
+                { id: '0111' }
+              ]
+            },
+            {
+              id: '012',
+              children: [
+                { id: '0120', children: [] }
+              ]
             }
           ]
-        }
+        },
+        { id: '02' }
       ]
     },
-    {
-      id: 3,
-      children: []
+    TREE_B: {
+      id: '0',
+      customChildrenProp: [
+        { id: '00' },
+        { id: '01', customChildrenProp: [] }
+      ]
     }
-  ]
-};
+  };
+}
 
-export const TREE_C: Tree<{ id: number }> = {
-  id: 0,
-  customChildrenProp: [
-    {
-      id: 1,
-      customChildrenProp: []
-    }
-  ]
-};
-
-export const projectFunction = (node: { id: number }) => of({
-  name: node.id || node.id === 0 ? 'N'+node.id : ''
-});
+export function resetData(): any {
+  return {};
+}

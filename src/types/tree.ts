@@ -4,6 +4,7 @@ export type Tree<T> = T | { [children: string]: Array<Tree<T>> };
 
 export function hasChildren(node: Tree<any>, childrenProperty: string): boolean {
   return (
+    node &&
     node[childrenProperty] &&
     node[childrenProperty] instanceof Array &&
     node[childrenProperty].length > 0
@@ -15,5 +16,5 @@ export function isRoot(node: Tree<any>): boolean {
 }
 
 export function isLeaf(node: Tree<any>, childrenProperty: string): boolean {
-  return !hasChildren(node, childrenProperty);
+  return node && !hasChildren(node, childrenProperty);
 }

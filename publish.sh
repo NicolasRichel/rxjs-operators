@@ -17,13 +17,13 @@ fi
 echo -e "Run tests...\n"
 yarn test
 if [ $? -ne 0 ]; then
-  echo -e "Tests failed !\n" >&2
+  echo -e "Sime tests failed !\nCancel publishing.\n" >&2
   exit 1
 fi
 echo -e "Build...\n"
 yarn build
 if [ $! -ne 0 ]; then
-  echo -e "Build failed !\n" >&2
+  echo -e "Build failed !\nCancel publishing.\n" >&2
   exit 1
 fi
 

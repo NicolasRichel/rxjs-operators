@@ -16,8 +16,7 @@ function createSrcFileTemplate {
   local opFnName=`dashToCamel $2`
   touch $srcFile
   echo -e "\
-import { Observable } from 'rxjs';\n\
-\n\n\
+import { Observable } from 'rxjs';\n\n\n\
 export function $opFnName(): (source: Observable<any>) => Observable<any> {\n\
   return null;\n\
 }" > $srcFile
@@ -29,10 +28,11 @@ function createSpecFileTemplate {
   local opFnName=`dashToCamel $2`
   touch $specFile
   echo -e "\
-describe('[ $opFnName ]', () => {\n\
-\n\
-  test('test', done => done());\n\
-\n\
+describe('[ $opFnName ]', () => {\n\n\
+  let data: any;\n\n\
+  beforeEach(() => data = {});\n\
+  afterEach(() => data = {});\n\n\n\
+  test('test', done => done());\n\n\
 });" > $specFile
 }
 
