@@ -17,19 +17,18 @@ fi
 echo -e "Run tests...\n"
 yarn test
 if [ $? -ne 0 ]; then
-  echo -e "Sime tests failed !\nCancel publishing.\n" >&2
+  echo -e "Some tests failed !\nCancel publishing.\n" >&2
   exit 1
 fi
 echo -e "Build...\n"
 yarn build
-if [ $! -ne 0 ]; then
+if [ $? -ne 0 ]; then
   echo -e "Build failed !\nCancel publishing.\n" >&2
   exit 1
 fi
 
-git tag -a v$version -m "Version $version [$(date +"%Y-%m-%dT%H:%M:%S")]"
-git push --tags
-
 yarn publish --access public --new-version $version
+git push
+git push --tags
 
 exit 0
