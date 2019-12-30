@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "A set of useful rxjs operators",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": "https://github.com/NicolasRichel/rxjs-operators",
   "author": "NicolasRichel <nicolasrichel.github@gmail.com>",
   "license": "Apache-2.0",
